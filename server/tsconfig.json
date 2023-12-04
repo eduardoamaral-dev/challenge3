@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "esnext",
+    "module": "commonjs",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["node", "node-notifier"]
+  },
+  "include": [
+    "./*.js",
+    "src/**/*.ts",
+    "test/**/*.ts",
+  ],
+}
