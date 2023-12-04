@@ -14,7 +14,7 @@ async function createWindow() {
     },
   });
 
-  await mainWindow.loadFile('client/dist/client/browser/index.html');
+  await mainWindow.loadFile('client/dist/challenge3-front/browser/index.html');
   mainWindow.on('close', (event) => {
     event.preventDefault();
     mainWindow.hide();
