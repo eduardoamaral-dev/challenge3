@@ -1,8 +1,8 @@
 {
   "workSchedule": {
-    "startOfWork": "2023-12-03T20:14:56.789Z",
-    "breakTime": "2023-12-03T20:20:56.789Z",
-    "backToWork": "2023-12-03T20:21:56.789Z",
-    "endOfWork": "2023-12-03T20:55:56.789Z"
+    "startOfWork": "14:09",
+    "breakTime": "00:12",
+    "backToWork": "00:12",
+    "endOfWork": ""
   }
 }

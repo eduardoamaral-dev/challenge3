@@ -1,10 +1,10 @@
 import WorkHoursCounter from "../helpers/WorkHoursCounter.ts";
 
 class WorkSchedule{
-     startOfWork : Date | undefined
-     breakTime : Date | undefined
-     backToWork : Date | undefined
-     endOfWork : Date | undefined
+     startOfWork : string | undefined
+     breakTime : string | undefined
+     backToWork : string | undefined
+     endOfWork : string | undefined
 }
 
 export default WorkSchedule

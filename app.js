@@ -6,8 +6,9 @@ let tray;
 
 async function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 800,
     height: 600,
+    width: 800,
+    resizable: false,
     webPreferences: {
       nodeIntegration: true,
       webSecurity: false,
@@ -27,6 +28,9 @@ app.whenReady().then(async () => {
   tray.on('click', () => {
     mainWindow.show();
   });
+  tray.on('right-click', () => {
+    mainWindow.options();
+  })
 });
 
 app.on('window-all-closed', () => {
@@ -34,8 +38,7 @@ app.on('window-all-closed', () => {
     app.quit();
   }
 });
-
-app.on('activate', async () => {
+app.on('right-click', async () => {
   if (mainWindow === null) {
     await createWindow().catch();
   }

@@ -33,16 +33,16 @@ class PunchClockManager {
 
     public async runAllCounters(){
         const startOfWork = new WorkHoursCounter()
-        startOfWork.start(this.workSchedule?.startOfWork!)
+        startOfWork.start(this.workSchedule?.startOfWork!, 'Não se esqueça de bater o seu ponto!', 'Clique aqui para bater o seu ponto')
 
         const breakTime = new WorkHoursCounter()
-        breakTime.start(this.workSchedule?.breakTime!)
+        breakTime.start(this.workSchedule?.breakTime!, 'Intervalooo!', 'Clique aqui para bater o seu ponto')
 
         const backToWork = new WorkHoursCounter()
-        backToWork.start(this.workSchedule?.backToWork!)
+        backToWork.start(this.workSchedule?.backToWork!, 'De volta ao trabalho!', 'Clique aqui para bater o seu ponto')
 
         const endOfWork = new WorkHoursCounter()
-        endOfWork.start(this.workSchedule?.endOfWork!)
+        endOfWork.start(this.workSchedule?.endOfWork!, 'Até logo, mas não se esqueça do ponto!', 'Clique aqui para bater o seu ponto')
     }
 }
 

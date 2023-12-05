@@ -11,17 +11,16 @@ class WorkScheduleService {
 
     public async setDefault() {
         const defaultWorkSchedule: WorkSchedule = {
-            startOfWork: new Date("2000-01-01T08:00:00.000Z"),
-            breakTime: new Date("2000-01-01T12:00:00.000Z"),
-            backToWork: new Date("2000-01-01T13:00:00.000Z"),
-            endOfWork: new Date("2000-01-01T17:00:00.000Z")
+            startOfWork: '08:00',
+            breakTime: '12:00',
+            backToWork: '13:00',
+            endOfWork: '17:00'
         }
         await this.repo.overwriteWorkSchedule(defaultWorkSchedule)
     }
 
     public async update(workSchedule: WorkSchedule) {
         try {
-
             await this.repo.overwriteWorkSchedule(workSchedule).then(async () => {
                 await this.punchClock.reload()
             })
