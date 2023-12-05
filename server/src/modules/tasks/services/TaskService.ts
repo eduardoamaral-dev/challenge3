@@ -1,6 +1,8 @@
 import TaskRepository from "../../../shared/persistence/repositories/TaskRepository.ts"
-import {inject} from "tsyringe"
+import {inject, injectable} from "tsyringe"
+import Task from '../models/Task.ts'
 
+@injectable()
 export default class TaskService{
     constructor(@inject('TaskRepository') private repo: TaskRepository) {
     }
@@ -8,7 +10,7 @@ export default class TaskService{
         this.repo.add(task)
     }
 
-    public getAll(){
+    public async getAll(){
         return this.repo.getTasks()
     }
 }
